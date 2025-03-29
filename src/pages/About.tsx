@@ -87,7 +87,7 @@ const About = () => {
         <SectionTitle theme={theme}>Experience</SectionTitle>
         <SectionContent theme={theme}>
           <SubSection>
-            <SubTitle theme={theme}>Associate Software Engineer - DevOps at Mesh Systems</SubTitle>
+            <SubTitle theme={theme}>Associate DevOps Engineer at Mesh Systems</SubTitle>
             <p>
               As an associate DevOps Engineer for Mesh Systems, I worked primarily with Azure 
               and Azure DevOps, writing IAC with Bicep/Terraform and building CI/CD pipelines. 
