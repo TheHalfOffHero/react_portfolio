@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 import { useTheme } from '../context/ThemeContext';
+import profileImage from '../assets/MattRuiz.jpg';
 
 const HeroSection = styled.section`
   min-height: 80vh;
@@ -60,7 +61,7 @@ const Home = () => {
     <HeroSection>
       <ProfileContainer>
         <ProfileImage
-          src="/src/assets/MattRuiz.jpg"
+          src={profileImage}
           alt="Matt Ruiz"
           theme={theme}
           initial={{ opacity: 0, scale: 0.8 }}
