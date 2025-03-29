@@ -11,6 +11,34 @@ const HeroSection = styled.section`
   gap: 2rem;
 `;
 
+const ProfileContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+  }
+`;
+
+const ProfileImage = styled(motion.img)`
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid ${props => props.theme === 'dark' ? '#ffffff' : '#333'};
+  
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const TextContainer = styled.div`
+  flex: 1;
+`;
+
 const Title = styled(motion.h1)<{ theme: 'light' | 'dark' }>`
   font-size: 4rem;
   font-weight: bold;
@@ -30,23 +58,36 @@ const Home = () => {
 
   return (
     <HeroSection>
-      <Title
-        theme={theme}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        Welcome to My Portfolio
-      </Title>
-      <Subtitle
-        theme={theme}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-      >
-        I'm a DevOps engineer with a deep passion for technology and continuous learning.
-        Welcome to my portfolio!
-      </Subtitle>
+      <ProfileContainer>
+        <ProfileImage
+          src="/src/assets/MattRuiz.jpg"
+          alt="Matt Ruiz"
+          theme={theme}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        />
+        <TextContainer>
+          <Title
+            theme={theme}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            Welcome to My Portfolio
+          </Title>
+          <Subtitle
+            theme={theme}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            I'm a DevOps Engineer with a passion for cloud infrastructure and automation.
+            From managing Kubernetes clusters to building CI/CD pipelines, I love creating
+            scalable solutions that empower development teams.
+          </Subtitle>
+        </TextContainer>
+      </ProfileContainer>
     </HeroSection>
   );
 };

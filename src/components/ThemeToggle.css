@@ -1,0 +1,38 @@
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.theme-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.theme-toggle input[type="checkbox"] {
+  width: 1.2rem;
+  height: 1.2rem;
+  cursor: pointer;
+  accent-color: #0066cc;
+}
+
+.theme-toggle label {
+  cursor: pointer;
+  user-select: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.theme-toggle label::before {
+  content: "🌙";
+  font-size: 1.2rem;
+}
+
+.theme-toggle input[type="checkbox"]:checked + label::before {
+  content: "☀️";
+} 

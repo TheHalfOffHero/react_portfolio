@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import styled from '@emotion/styled';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
+import About from './pages/About';
 import Navigation from './components/Navigation';
 import { ThemeProvider, useTheme } from './context/ThemeContext';
 
@@ -29,6 +30,7 @@ function AppContent() {
         <MainContent>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
           </Routes>
         </MainContent>

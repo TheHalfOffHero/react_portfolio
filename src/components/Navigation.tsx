@@ -51,9 +51,10 @@ const Navigation = () => {
   return (
     <Nav theme={theme}>
       <NavContainer>
-        <Logo to="/" theme={theme}>Portfolio</Logo>
+        <Logo to="/" theme={theme}>Matt Ruiz</Logo>
         <NavLinks>
           <NavLink to="/" theme={theme}>Home</NavLink>
+          <NavLink to="/about" theme={theme}>About</NavLink>
           <NavLink to="/projects" theme={theme}>Projects</NavLink>
           <ThemeToggle />
         </NavLinks>
