@@ -55,7 +55,7 @@ const Navigation = () => {
         <NavLinks>
           <NavLink to="/" theme={theme}>Home</NavLink>
           <NavLink to="/about" theme={theme}>About</NavLink>
-          <NavLink to="/projects" theme={theme}>Projects</NavLink>
+          {/* <NavLink to="/projects" theme={theme}>Projects</NavLink> */}
           <ThemeToggle />
         </NavLinks>
       </NavContainer>
